@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Conference 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CloudConf 2026</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#register" class="btn-register">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Cloud Conference 2026</h1>
+            <p>Build. Scale. Innovate.</p>
+            <p class="subtitle">The Premier Technology Summit for DevOps, Kubernetes, and AI</p>
+            <a href="#register" class="btn-primary">Reserve Your Seat</a>
+        </div>
+        <div class="hero-graphics">
+            <div class="circle"></div>
+            <div class="circle circle-2"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About The Summit</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Discover the latest advancements in cloud architecture, multi-cloud strategies, and serverless technologies.</p>
+                </div>
+                <div class="about-card">
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Master modern CI/CD pipelines, automated testing, and secure software delivery practices.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Kubernetes</h3>
+                    <p>Deep dive into container orchestration, service meshes, and cloud-native ecosystems.</p>
+                </div>
+                <div class="about-card">
+                    <h3>AI & Infrastructure</h3>
+                    <p>Learn how artificial intelligence is shaping the future of infrastructure provisioning and monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers" class="speakers">
+        <div class="container">
+            <h2>Featured Speakers</h2>
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <div class="speaker-img placeholder-1"></div>
+                    <h3>Jane Doe</h3>
+                    <p class="role">Principal Cloud Architect</p>
+                    <p>Expert in distributed systems and scalable cloud architectures.</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-img placeholder-2"></div>
+                    <h3>John Smith</h3>
+                    <p class="role">Head of DevOps</p>
+                    <p>Pioneer in infrastructure as code and automated deployment strategies.</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-img placeholder-3"></div>
+                    <h3>Alice Johnson</h3>
+                    <p class="role">Kubernetes Maintainer</p>
+                    <p>Core contributor to Kubernetes and cloud-native security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="agenda">
+        <div class="container">
+            <h2>Event Agenda</h2>
+            <div class="agenda-list">
+                <div class="agenda-item">
+                    <div class="time">09:00 AM</div>
+                    <div class="details">
+                        <h3>Opening Keynote: The Future of Cloud</h3>
+                        <p>Jane Doe</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="time">11:00 AM</div>
+                    <div class="details">
+                        <h3>DevOps & CI/CD Mastery</h3>
+                        <p>John Smith</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="time">01:00 PM</div>
+                    <div class="details">
+                        <h3>Lunch & Networking</h3>
+                        <p>Main Hall</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="time">03:00 PM</div>
+                    <div class="details">
+                        <h3>Kubernetes & Cloud Native Ecosystems</h3>
+                        <p>Alice Johnson</p>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="time">05:00 PM</div>
+                    <div class="details">
+                        <h3>Closing Session & Tech Awards</h3>
+                        <p>Panel Discussion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="register">
+        <div class="container">
+            <h2>Register Now</h2>
+            <p>Secure your spot at the tech event of the year.</p>
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn-primary btn-submit">Complete Registration</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Cloud Conference. Built for demonstration.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

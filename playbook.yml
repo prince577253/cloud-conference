@@ -1,0 +1,45 @@
+---
+- name: Configure Web Server for Cloud Conference
+  hosts: webservers
+  become: yes
+  
+  tasks:
+    - name: Ping the server to verify connectivity
+      ping:
+
+    - name: Update apt cache (Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+      ignore_errors: yes # Added for local demo compatibility
+      
+    - name: Create application directory
+      file:
+        path: /opt/cloud-conference
+        state: directory
+        mode: '0755'
+
+    - name: Ensure required dependencies are installed (curl)
+      package:
+        name: curl
+        state: present
+      ignore_errors: yes
+
+    - name: Create a dummy config file to demonstrate configuration management
+      copy:
+        dest: /opt/cloud-conference/app.conf
+        content: |
+          # Managed by Ansible
+          APP_NAME=cloud-conference
+          ENV=production
+        mode: '0644'
+        
+    - name: Verify application directory exists
+      stat:
+        path: /opt/cloud-conference
+      register: app_dir
+      
+    - name: Debug directory status
+      debug:
+        msg: "Application directory created successfully!"
+      when: app_dir.stat.exists
